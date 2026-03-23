@@ -1,11 +1,11 @@
 import React from 'react';
 import { Head, Link } from '@inertiajs/react';
-import { 
-    LayoutDashboard, 
-    Activity, 
-    HeartPulse, 
-    Users, 
-    Settings, 
+import {
+    LayoutDashboard,
+    Activity,
+    HeartPulse,
+    Users,
+    Settings,
     LogOut,
     Bell,
     Search,
@@ -39,8 +39,7 @@ export default function DashboardLayout({ children, title }) {
     return (
         <div className="flex h-screen bg-background overflow-hidden selection:bg-primary/10">
             <Head title={title} />
-            
-            {/* Sidebar */}
+
             <aside className="w-64 border-r border-border bg-white flex flex-col z-20">
                 <div className="p-6">
                     <Link href="/" className="flex items-center gap-2 group">
@@ -60,7 +59,6 @@ export default function DashboardLayout({ children, title }) {
 
                     <NavSection title="Insights">
                         <SidebarItem href="#" icon={HeartPulse} label="Cardiology Reports" />
-                        {/* Placeholder for more */}
                     </NavSection>
                 </div>
 
@@ -72,15 +70,13 @@ export default function DashboardLayout({ children, title }) {
                 </div>
             </aside>
 
-            {/* Main Content Area */}
             <main className="flex-1 flex flex-col min-w-0 overflow-hidden relative">
-                {/* Header */}
                 <header className="h-16 border-b border-border bg-white px-8 flex items-center justify-between z-10 sticky top-0">
                     <div className="max-w-md w-full relative">
                         <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
-                        <input 
-                            type="text" 
-                            placeholder="Search patient record..." 
+                        <input
+                            type="text"
+                            placeholder="Search patient record..."
                             className="w-full bg-slate-50 border border-slate-200 rounded-full py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary/30 transition-all placeholder:text-slate-400"
                         />
                     </div>
@@ -102,7 +98,6 @@ export default function DashboardLayout({ children, title }) {
                     </div>
                 </header>
 
-                {/* Dashboard Scroll Area */}
                 <div className="flex-1 overflow-y-auto p-8 custom-scrollbar">
                     <div className="max-w-7xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-2 duration-700">
                         {children}

@@ -13,9 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 
         <style>
-            /* Balanced headings prevent orphans/widows */
             h1, h2, h3 { text-wrap: balance; }
-            /* Premium scrollbar for the medical surface */
             ::-webkit-scrollbar { width: 6px; }
             ::-webkit-scrollbar-track { background: transparent; }
             ::-webkit-scrollbar-thumb { background: #E2E8F0; border-radius: 10px; }

@@ -3,10 +3,10 @@ import { Head, Link } from '@inertiajs/react';
 import DashboardLayout from '@/Layouts/DashboardLayout';
 import { cn } from "@/lib/utils";
 import { Card, StatCard } from '@/Components/Card';
-import { 
-    Heart, 
-    Zap, 
-    Droplets, 
+import {
+    Heart,
+    Zap,
+    Droplets,
     Search,
     ChevronRight,
     ArrowUpRight,
@@ -19,7 +19,6 @@ import { Button } from '@/components/ui/button';
 export default function Dashboard() {
     return (
         <DashboardLayout title="Medical Dashboard">
-            {/* Hero Header Section */}
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2 border-b border-slate-200/60">
                 <div className="space-y-1">
                     <p className="text-xs font-bold text-primary uppercase tracking-[0.2em] mb-2 leading-none">Diagnostic Center</p>
@@ -40,32 +39,31 @@ export default function Dashboard() {
                 </div>
             </div>
 
-            {/* Quick Risk Assessment Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <StatCard 
-                    title="Avg. Heart Rate" 
-                    value="72" 
-                    unit="bpm" 
-                    change="2.4" 
-                    icon={Heart} 
+                <StatCard
+                    title="Avg. Heart Rate"
+                    value="72"
+                    unit="bpm"
+                    change="2.4"
+                    icon={Heart}
                 />
-                <StatCard 
-                    title="Blood Pressure" 
-                    value="118/72" 
-                    unit="mmHg" 
-                    change="-1.2" 
-                    icon={Zap} 
+                <StatCard
+                    title="Blood Pressure"
+                    value="118/72"
+                    unit="mmHg"
+                    change="-1.2"
+                    icon={Zap}
                 />
-                <StatCard 
-                    title="Glucose Level" 
-                    value="94" 
-                    unit="mg/dl" 
-                    change="0.8" 
-                    icon={Droplets} 
+                <StatCard
+                    title="Glucose Level"
+                    value="94"
+                    unit="mg/dl"
+                    change="0.8"
+                    icon={Droplets}
                 />
-                <Card 
-                    title="Prediction Confidence" 
-                    subtitle="AI Model Confidence" 
+                <Card
+                    title="Prediction Confidence"
+                    subtitle="AI Model Confidence"
                     icon={TrendingUp}
                     className="group"
                 >
@@ -79,11 +77,9 @@ export default function Dashboard() {
                 </Card>
             </div>
 
-            {/* Main Content: Visualization & Detailed Assessment */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                {/* Population Health Visualization (Recharts Placeholder) */}
-                <Card 
-                    title="Population Health Intensity" 
+                <Card
+                    title="Population Health Intensity"
                     subtitle="Distribution of risk factors across patient cohorts"
                     className="lg:col-span-2 min-h-[400px] flex flex-col justify-between"
                 >
@@ -91,10 +87,10 @@ export default function Dashboard() {
                         <p className="text-slate-400 font-semibold uppercase tracking-widest text-[10px] mb-4">Recharts Visualization Ready</p>
                         <div className="flex gap-4 items-end h-32 mb-6">
                              {[40, 70, 45, 90, 65, 80, 50].map((h, i) => (
-                                 <div 
-                                    key={i} 
-                                    className="w-8 bg-slate-200/60 rounded-t-lg transition-all duration-500 group-hover:bg-primary/20 group-hover:translate-y-[-4px]" 
-                                    style={{ height: `${h}%` }} 
+                                 <div
+                                    key={i}
+                                    className="w-8 bg-slate-200/60 rounded-t-lg transition-all duration-500 group-hover:bg-primary/20 group-hover:translate-y-[-4px]"
+                                    style={{ height: `${h}%` }}
                                  />
                              ))}
                         </div>
@@ -121,10 +117,8 @@ export default function Dashboard() {
                     </div>
                 </Card>
 
-                {/* Patient List / Recent Assessment */}
                 <div className="space-y-6">
                     <Card title="Quick Risk Assessment" subtitle="Priority review required" className="bg-slate-900 border-none group hover:shadow-[0_20px_50px_rgba(15,23,42,0.15)] overflow-visible relative">
-                         {/* Dark theme card for emphasis */}
                          <div className="absolute -top-3 -right-3 w-12 h-12 bg-primary rounded-2xl flex items-center justify-center text-white shadow-xl shadow-primary/30 z-10 group-hover:scale-110 group-hover:rotate-6 transition-transform">
                             <Zap size={24} fill="white" />
                          </div>
@@ -146,8 +140,8 @@ export default function Dashboard() {
                                     </div>
                                     <div className={cn(
                                         "px-2 py-0.5 rounded text-[9px] font-extrabold uppercase tracking-widest",
-                                        p.risk === "Critical" ? "bg-rose-500/20 text-rose-400 border border-rose-500/30" : 
-                                        p.risk === "Stable" ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30" : 
+                                        p.risk === "Critical" ? "bg-rose-500/20 text-rose-400 border border-rose-500/30" :
+                                        p.risk === "Stable" ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30" :
                                         "bg-amber-500/20 text-amber-400 border border-amber-500/30"
                                     )}>
                                         {p.risk}
@@ -188,7 +182,6 @@ export default function Dashboard() {
     );
 }
 
-// Custom simple scrollbar utility in CSS or JS
 const customScrollbarStyle = `
 .custom-scrollbar::-webkit-scrollbar { width: 6px; }
 .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
