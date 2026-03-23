@@ -8,15 +8,44 @@ export default function Hero() {
             className="relative bg-white min-h-[calc(100vh-4rem)] flex items-center border-b border-slate-100 antialiased overflow-hidden"
         >
             <div className="absolute inset-0 opacity-[0.02]">
-                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                    width="100%"
+                    height="100%"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
                     <defs>
-                        <pattern id="medical-grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <pattern
+                            id="medical-grid"
+                            x="0"
+                            y="0"
+                            width="40"
+                            height="40"
+                            patternUnits="userSpaceOnUse"
+                        >
                             <circle cx="20" cy="20" r="1" fill="#0360D9" />
-                            <line x1="0" y1="20" x2="40" y2="20" stroke="#0360D9" strokeWidth="0.5" />
-                            <line x1="20" y1="0" x2="20" y2="40" stroke="#0360D9" strokeWidth="0.5" />
+                            <line
+                                x1="0"
+                                y1="20"
+                                x2="40"
+                                y2="20"
+                                stroke="#0360D9"
+                                strokeWidth="0.5"
+                            />
+                            <line
+                                x1="20"
+                                y1="0"
+                                x2="20"
+                                y2="40"
+                                stroke="#0360D9"
+                                strokeWidth="0.5"
+                            />
                         </pattern>
                     </defs>
-                    <rect width="100%" height="100%" fill="url(#medical-grid)" />
+                    <rect
+                        width="100%"
+                        height="100%"
+                        fill="url(#medical-grid)"
+                    />
                 </svg>
             </div>
 
@@ -31,12 +60,16 @@ export default function Hero() {
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-950 tracking-tighter leading-[1.05] mb-6">
                             Clinical analysis for
-                            <span className="block text-[#0360D9]">cardiovascular risk.</span>
+                            <span className="block text-[#0360D9]">
+                                cardiovascular risk.
+                            </span>
                         </h1>
 
                         <p className="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-10">
-                            A deterministic inference engine utilizing 12 validated diagnostic parameters.
-                            Built for clinical teams requiring precision, reproducibility, and speed.
+                            A deterministic inference engine utilizing 12
+                            validated diagnostic parameters. Built for clinical
+                            teams requiring precision, reproducibility, and
+                            speed.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
@@ -61,9 +94,14 @@ export default function Hero() {
                                 <div className="flex items-center justify-between mb-6">
                                     <div className="flex items-center gap-2">
                                         <div className="w-3 h-3 rounded-full bg-red-500" />
-                                        <span className="text-sm font-semibold text-slate-700">ECG Signal</span>
+                                        <span className="text-sm font-semibold text-slate-700">
+                                            ECG Signal
+                                        </span>
                                     </div>
-                                    <Activity size={20} className="text-[#0360D9]" />
+                                    <Activity
+                                        size={20}
+                                        className="text-[#0360D9]"
+                                    />
                                 </div>
 
                                 <div className="h-32 flex items-end justify-center gap-1 mb-6">
@@ -73,7 +111,10 @@ export default function Hero() {
                                             className="w-1 bg-[#0360D9] rounded-full"
                                             style={{
                                                 height: `${Math.sin(i * 0.5) * 20 + 40}px`,
-                                                opacity: Math.random() > 0.3 ? 1 : 0.3
+                                                opacity:
+                                                    Math.random() > 0.3
+                                                        ? 1
+                                                        : 0.3,
                                             }}
                                         />
                                     ))}
@@ -81,12 +122,20 @@ export default function Hero() {
 
                                 <div className="grid grid-cols-2 gap-4">
                                     <div className="bg-slate-50 rounded-lg p-3">
-                                        <p className="text-xs text-slate-500 uppercase tracking-wide">Heart Rate</p>
-                                        <p className="text-lg font-bold text-slate-900">72 BPM</p>
+                                        <p className="text-xs text-slate-500 uppercase tracking-wide">
+                                            Heart Rate
+                                        </p>
+                                        <p className="text-lg font-bold text-slate-900">
+                                            72 BPM
+                                        </p>
                                     </div>
                                     <div className="bg-slate-50 rounded-lg p-3">
-                                        <p className="text-xs text-slate-500 uppercase tracking-wide">Risk Level</p>
-                                        <p className="text-lg font-bold text-green-600">Low</p>
+                                        <p className="text-xs text-slate-500 uppercase tracking-wide">
+                                            Risk Level
+                                        </p>
+                                        <p className="text-lg font-bold text-green-600">
+                                            Low
+                                        </p>
                                     </div>
                                 </div>
                             </div>
