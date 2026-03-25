@@ -3,6 +3,7 @@ import Navbar from "@/Components/Landing/Navbar";
 import Hero from "@/Components/Landing/Hero";
 import Features from "@/Components/Landing/Features";
 import TrustSection from "@/Components/Landing/TrustSection";
+import CtaSection from "@/Components/Landing/CtaSection";
 import Footer from "@/Components/Landing/Footer";
 
 export default function Landing() {
@@ -17,6 +18,7 @@ export default function Landing() {
                 <Hero />
                 <TrustSection />
                 <Features />
+                <CtaSection />
             </main>
             <Footer />
         </div>
