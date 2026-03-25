@@ -42,7 +42,6 @@ export default function AnalysisPreview({ data }) {
                     );
                 })}
             </div>
-            {/* Added subtle decor line at bottom matching Clean architecture */}
             <div className="mt-8 border-t border-slate-200/60 pt-6">
                 <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-slate-400">
                     <span className="h-1.5 w-1.5 rounded-full bg-[#0360D9]/50 animate-pulse"></span>

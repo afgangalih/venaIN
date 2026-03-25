@@ -77,14 +77,12 @@ export default function AnalysisResult({ result }) {
     const { drivers, positives } = analyzeVitals(result.inputs);
     const isCritical = result.riskScore >= 60;
     
-    // Benchmark mapping requested: Resting BP, Cholesterol, Max HR
     const benchmarkData = [
         { name: "Resting BP", user: Number(result.inputs.trestbps) || 0, avg: 131, unit: "mmHg" },
         { name: "Cholesterol", user: Number(result.inputs.chol) || 0, avg: 246, unit: "mg/dL" },
         { name: "Max HR", user: Number(result.inputs.thalach) || 0, avg: 149, unit: "bpm" }
     ];
 
-    // Radial configuration
     const radialData = [{ name: 'Score', value: result.riskScore, fill: isCritical ? '#E11D48' : '#0360D9' }];
 
     return (
@@ -104,10 +102,7 @@ export default function AnalysisResult({ result }) {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
-                    
-                    {/* LEFT COLUMN (60%) */}
                     <div className="lg:col-span-3 space-y-8">
-                        {/* Primary Gauge Card */}
                         <div className="bg-white border border-slate-100 rounded-[2rem] p-10 lg:p-14 shadow-[0_2px_10px_-3px_rgb(0_0_0_/_0.02)] flex flex-col items-center justify-center text-center relative overflow-hidden">
                             <h2 className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-8 z-10">Calculated Risk Index</h2>
                             
@@ -149,7 +144,6 @@ export default function AnalysisResult({ result }) {
                             </div>
                         </div>
 
-                        {/* Action Plan Component */}
                         <div className="bg-white border border-slate-100 rounded-[2rem] p-10 lg:p-12 shadow-[0_2px_10px_-3px_rgb(0_0_0_/_0.02)] relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-8 opacity-[0.03]">
                                 <HeartPulse className="h-48 w-48" />
@@ -174,10 +168,7 @@ export default function AnalysisResult({ result }) {
                         </div>
                     </div>
 
-                    {/* RIGHT COLUMN (40%) */}
                     <div className="lg:col-span-2 space-y-8">
-                        
-                        {/* Interactive Contextual Benchmarking */}
                         <div className="bg-white border border-slate-100 rounded-[2rem] p-8 lg:p-10 shadow-[0_2px_10px_-3px_rgb(0_0_0_/_0.02)]">
                             <h3 className="text-lg font-bold tracking-tight text-slate-950 mb-8 flex items-center justify-between">
                                 Contextual Benchmarking
@@ -196,7 +187,6 @@ export default function AnalysisResult({ result }) {
                             </div>
                         </div>
 
-                        {/* Clinical Insights */}
                         <div className="bg-white border border-slate-100 rounded-[2rem] p-8 lg:p-10 shadow-[0_2px_10px_-3px_rgb(0_0_0_/_0.02)]">
                             <h3 className="text-lg font-bold tracking-tight text-slate-950 mb-8">Clinical Insights</h3>
                             

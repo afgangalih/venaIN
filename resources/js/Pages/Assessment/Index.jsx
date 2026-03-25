@@ -61,7 +61,6 @@ export default function AssessmentIndex({ result }) {
         }
     };
 
-    // Orchestrator Logic: Pass to new Decoupled Component
     if (result) {
         return <AnalysisResult result={result} />;
     }
